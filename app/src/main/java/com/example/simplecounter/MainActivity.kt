@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
 import android.widget.TextView
 
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button = findViewById<Button>(R.id.buttonIncr)
+        val button = findViewById<ImageButton>(R.id.buttonIncr)
 
         val upgradeButton = findViewById<Button>(R.id.upgradeBtn)
 
@@ -28,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             if (counter >= 100) {
                 upgradeButton.visibility = View.VISIBLE
                 upgradeButton.setOnClickListener {
-                    button.text = "Add 2"
+                    //button.text = "Add 2"
 
                     button.setOnClickListener {
                         counter += 2
